@@ -1,0 +1,41 @@
+.r-field-check 
+    margin-bottom: 34px
+    position: relative
+    &__input 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -9999
+        visibility: hidden
+        &:checked + .r-field-check__label
+            &::before 
+                border: 2px solid #0880AE
+            &::after
+                display: block
+    &__label 
+        position: relative
+        padding-left: 37px
+        color: #756F86
+        cursor: pointer
+        &::before 
+            content: ''
+            position: absolute
+            width: 28px
+            height: 28px
+            left: 0px
+            top: -4px
+            background: #FFFFFF
+            border: 1px solid #DBE2EA
+            box-sizing: border-box
+            box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04)
+            border-radius: 4px
+        &::after 
+            content: ''
+            position: absolute
+            display: none
+            top: 5px
+            left: 5px
+            width: 16px
+            height: 11px
+            background: url('check.svg') no-repeat center
+            background-size: contain

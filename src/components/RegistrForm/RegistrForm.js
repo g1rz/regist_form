@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import TextField from '../TextField/TextField';
+import Check from '../Check/Check';
 
 import './RegistrForm.sass';
 
@@ -15,6 +16,8 @@ const RegistrForm = () => {
     const [validPhone, setValidPhone] = React.useState(false);
 
     const [userLang, setUserLang] = React.useState('');
+
+    const [pdn, setPdn] = React.useState(false);
 
     const inputName = (text) => {
         setUserName(text);
@@ -48,6 +51,11 @@ const RegistrForm = () => {
 
     const inputLang = (text) => {
         setUserLang(text);
+    };
+
+    const inputPdn = (isCheck) => {
+        setPdn(isCheck);
+        console.log(isCheck);
     };
 
     const languages = [
@@ -106,6 +114,10 @@ const RegistrForm = () => {
                 list={languages}
                 onClick={inputLang}
             />
+
+            <Check fieldId="pdn" required={true} onClick={inputPdn}>
+                Принимаю <a href="#">условия</a> использования
+            </Check>
         </form>
     );
 };
