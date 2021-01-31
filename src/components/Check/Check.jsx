@@ -7,7 +7,7 @@ const Check = ({ fieldId, required, children, onClick }) => {
 
     const handlerClick = () => {
         setIsCheck(!isCheck);
-        onClick(isCheck);
+        onClick(!isCheck);
     };
 
     return (

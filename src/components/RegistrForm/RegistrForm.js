@@ -77,7 +77,6 @@ const RegistrForm = () => {
     ];
 
     let isDisableSubmit = !(validName && validEmail && validPhone && userLang && pdn);
-    console.log(isDisableSubmit);
     return (
         <form className="r-form">
             <TextField
