@@ -1,4 +1,5 @@
 import React from 'react';
+import RegistrForm from '../RegistrForm/RegistrForm';
 
 import './Modal.sass';
 
@@ -12,6 +13,8 @@ const Modal = () => {
                     Войти
                 </a>
             </p>
+
+            <RegistrForm />
         </div>
     );
 };
