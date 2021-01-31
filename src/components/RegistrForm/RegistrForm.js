@@ -55,7 +55,6 @@ const RegistrForm = () => {
 
     const inputPdn = (isCheck) => {
         setPdn(isCheck);
-        console.log(isCheck);
     };
 
     const languages = [
@@ -77,6 +76,8 @@ const RegistrForm = () => {
         },
     ];
 
+    let isDisableSubmit = !(validName && validEmail && validPhone && userLang && pdn);
+    console.log(isDisableSubmit);
     return (
         <form className="r-form">
             <TextField
@@ -118,6 +119,10 @@ const RegistrForm = () => {
             <Check fieldId="pdn" required={true} onClick={inputPdn}>
                 Принимаю <a href="#">условия</a> использования
             </Check>
+
+            <button className="r-form__btn" type="submit" disabled={isDisableSubmit}>
+                Зарегистрироваться
+            </button>
         </form>
     );
 };
