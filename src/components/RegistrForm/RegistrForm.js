@@ -21,7 +21,7 @@ const RegistrForm = () => {
 
     const inputName = (text) => {
         setUserName(text);
-        if (text.search(/[^A-Za-z_-]/g) === -1) {
+        if (text.search(/[^A-Za-zА-Яа-я_-]/g) === -1) {
             setValidName(true);
         } else {
             setValidName(false);
